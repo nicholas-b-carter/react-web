@@ -66,6 +66,6 @@
     "react-timer-mixin": "0.13.2",
     "rebound": "0.0.13",
     "webpack": "1.13.2",
-    "webpack-dev-server": "1.16.1"
+    "webpack-dev-server": "3.1.6"
   }
 }
