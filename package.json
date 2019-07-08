@@ -20,8 +20,9 @@
     "lint": "eslint --ext .js --ext .jsx ./",
     "start": "node local-cli/cli.js start webpack.config.js",
     "demo": "node local-cli/cli.js bundle webpack.config.js",
-    "prepublish": "node scripts/publish",
-    "postpublish": "rm -rf ./lib"
+    "prepublish": "npm run snyk-protect; node scripts/publish",
+    "postpublish": "rm -rf ./lib",
+    "snyk-protect": "snyk protect"
   },
   "devDependencies": {
     "babel-eslint": "7.0.0",
@@ -66,6 +67,8 @@
     "react-timer-mixin": "0.13.2",
     "rebound": "0.0.13",
     "webpack": "1.13.2",
-    "webpack-dev-server": "1.16.1"
-  }
+    "webpack-dev-server": "1.16.1",
+    "snyk": "^1.192.4"
+  },
+  "snyk": true
 }
